@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+宇智波子光
+
+A causal learner on machine learning, mind over data.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+9 * 856 = 3 * 24 * 107, which made my heart sing and smile. 
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[cq_njust@qq.com](mailto:cq_njust@qq.com)
