@@ -4,12 +4,18 @@ title: About
 permalink: /about/
 ---
 
+<<<<<<< HEAD
 I am a machine learning 
+=======
+宇智波子光
+
+A causal learner on machine learning, mind over data.
+>>>>>>> da5b74021bbb9994f2bc065e3d2fb9959bf3c901
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+9 * 856 = 3 * 24 * 107, which made my heart sing and smile. 
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[cq_njust@qq.com](mailto:cq_njust@qq.com)
