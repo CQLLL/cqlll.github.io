@@ -3,25 +3,25 @@ layout: post
 title: Data Crawler in Taobao(Small Example)
 ---
 ## Preface
-    I'm really excited to write this post because it may give help to my friends and also help me know Web Crawler better. Although I don't use the crawler too much, I think this is an essential skill in the Internet age.For a quick start, I just show a small example in data crawler.
+`I'm really excited to write this post because it may give help to my friends and also help me know Web Crawler better. Although I don't use the crawler too much, I think this is an essential skill in the Internet age.For a quick start, I just show a small example in data crawler.`
 
-    So let's Start it!
+`So let's Start it!`
 
 ## Have a look, and just look
 
-    One of my best friend told me that she need the sale data about Midea, Joyoung(...)'s air fryer and Dianbingdang. So I search them in [Taobao](https://www.taobao.com/) firstly. Look, some pictures are as follow:
-    ![Midea](../images/taobao1.jpg)
-
-    Then we can click the button of sales-dec and it may be helpful for selection.
+`One of my best friend told me that she need the sale data about Midea, Joyoung(...)'s air fryer and Dianbingdang. So I search them in [Taobao](https://www.taobao.com/) firstly. Look, some pictures are as follow:`
+![Midea](../images/taobao1.jpg)
+`Then we can click the button of sales-dec and it may be helpful for selection.`
 
 ![Midea](../images/taobao3.jpg)
 
-    And we have get 25 pages we may need. Some sale data, for example price,numbers,location,is just sorted. The data we see is in a month after I asked one of the Xiaoers(the store's owner). 
+`And we have get 25 pages we may need. Some sale data, for example price,numbers,location,is just sorted. The data we see is in a month after I asked one of the Xiaoers(the store's owner). `
 
 ![Midea](../images/taobao2.jpg)
 
 ## Some Information of Us
-    OK, now we wanna get the sale data from these pages. We should press the F12 & F5 to get the console and refresh the page.
+
+`OK, now we wanna get the sale data from these pages. We should press the F12 & F5 to get the console and refresh the page.`
 
 
 ![Midea](../images/url_and_cookie.jpg)
@@ -30,11 +30,10 @@ title: Data Crawler in Taobao(Small Example)
 ![Midea](../images/cookie.jpg)
 
 
-    We should copy the two main items (URL and cookies) above. Because the cookies are my private login information, you just get the cookies in your Browser(ex. Google Chrome).
+`We should copy the two main items (URL and cookies) above. Because the cookies are my private login information, you just get the cookies in your Browser(ex. Google Chrome).`
 
 ## Writing Codes 
-
-    We can write a scripts of Python to get the data.I give a small but useful template as follow:
+`We can write a scripts of Python to get the data.I give a small but useful template as follow:`
 ```python
 import requests
 import re
@@ -77,4 +76,4 @@ for p in tqdm(range(25)):
 ## Results
 ![Midea](../images/results.jpg)
 
-    Finally, we should organize the data into dataframe or store them as xxxx.csv to do analysis later. Bingo!
+`Finally, we should organize the data into dataframe or store them as xxxx.csv to do analysis later. Bingo!`
