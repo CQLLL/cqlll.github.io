@@ -20,7 +20,7 @@ Then we can click the button of sales-dec and it may be helpful for selection.
 
 ![Midea](../images/taobao3.jpg)
 
-And we have get 25 pages we may need. Some sale data, for example price,numbers,location,is just sorted. The data we see is in a month after I asked one of the Xiaoers(the store's owner). 
+And we have get 25 pages we may need. Some sale data, for example,price,numbers,location,is just sorted. The data we see is in a month after I asked one of the Xiaoers(the store's owner). 
 
 ![Midea](../images/taobao2.jpg)
 
