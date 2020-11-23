@@ -37,7 +37,7 @@ OK, now we wanna get the sale data from these pages. We should press the F12 & F
 
 We should copy the two main items (URL and cookies) above. Because the cookies are my private login information, you just get the cookies in your Browser(ex. Google Chrome).
 
-## Writing Codes 
+## Coding
 
 We can write a scripts of Python to get the data.I give a small but useful template as follow:
 
