@@ -14,9 +14,9 @@ My name is Alan Cheng. I have the following qualities:
 
 ### My story
 
-8.26 = 0.7 × |3-1-4| × 5.9
-9.18 = 2.7 × |6-0-5| × 3.4
-The first time I knew LOVE,
-9 * 856 = 3 * 24 * 107, 
+8.26 = 0.7 × |3-1-4| × 5.9,</br>
+9.18 = 2.7 × |6-0-5| × 3.4,</br>
+The first time I knew LOVE,</br>
+9 * 856 = 3 * 24 * 107, </br>
 which is my TRUTH!
 
