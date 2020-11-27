@@ -10,19 +10,19 @@ On Windows 10 system, the SSH client is installed by default. But OpenSSH Server
 Here are some pictures about OpenSSH Server installation on Windows 10, we can extend the application just by using optional symbol. 
 
 <center class="half">
-    <img src="../images/openSSH/OpenSSH.png" width="250" height="220"/><img src="../images/openSSH/openssh_installed.png" width="110" height="220"/>
+    <img src="../images/openSSH/OpenSSH.png" width="450" height="380"/><img src="../images/openSSH/openssh_installed.png" width="225" height="380"/>
 </center>
 
 That is very important step, if you close the service of Windows Update, you will not install the OpenSSH Server successfully.(For me, I just close the Update because I don't my machine reboot automatically during the night). So make sure that it is enabled.
 
 <center class="half">
-    <img src="../images/openSSH/winupdate.png" width="250" height="220"/>
+    <img src="../images/openSSH/winupdate.png"/>
 </center>
 
 You need administrator privileges to enable services so open Powershell as Administrator, (right click on the win icon in the bottom)
 
 <center class="half">
-    <img src="../images/openSSH/Powershell.jpg" width="200" height="300"/>
+    <img src="../images/openSSH/Powershell.jpg" width="250" height="350"/>
 </center>
 
 And then, follow these commands:
@@ -54,7 +54,7 @@ There are two ways to start jupyter notebook.
 you can open it as txt, and find these position, change them as follow and save:
 
 <center class="half">
-    <img src="../images/openSSH/position.png" width="300" height="250"/>
+    <img src="../images/openSSH/position.png" />
 </center>
 
 Finally, these operation can be replaced by the second way when you just use `jupyter notebook` as command.
