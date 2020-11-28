@@ -15,7 +15,7 @@ Here are some pictures about OpenSSH Server installation on Windows 10, we can e
     <img src="../images/openSSH/OpenSSH.png" width="450" height="380"/><img src="../images/openSSH/openssh_installed.png" width="225" height="380"/>
 </center>
 
-That is very important step, if you close the service of Windows Update, you will not install the OpenSSH Server successfully.(For me, I just close the Update because I don't my machine reboot automatically during the night). So make sure that it is enabled.
+That is very important step, if you close the service of Windows Update, you will not install the OpenSSH Server successfully.(For me, I just close the Update because I don't hope my machine reboot automatically during the night). So make sure that it is enabled.
 
 <center class="half">
     <img src="../images/openSSH/winupdate.png"/>
