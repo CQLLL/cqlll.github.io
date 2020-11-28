@@ -3,6 +3,8 @@ layout: post
 title: Win10 OpenSSH Server and Config Remote Jupyter 
 ---
 
+
+
 ## 1. Enable ssh and ssh server on Windows 10
     
 On Windows 10 system, the SSH client is installed by default. But OpenSSH Server is uninstalled which is installed On Linux(like Ubuntu) by default. So that's why we can not use `ssh user-name-on-remote-sys@ip-address-of-remote-sys` to connect to the Windows machine directly.
@@ -79,5 +81,9 @@ After I input the password, I start the remote jupyter service on my laplop, jus
 # BAM!!!
 
 
+## Reference
+[How To Use SSH Client and Server on Windows 10](https://www.pugetsystems.com/labs/hpc/How-To-Use-SSH-Client-and-Server-on-Windows-10-1470/?__cf_chl_captcha_tk__=81df8c0e27d8db49f2bf8016b24bf4ed557de063-1606536000-0-AcHgD47k3sHIAn65uZLgresk1ZDqpssmRlquK20WDsrO_5PM5rXX5PiEuhdjyRMJAH_B3LrKG4y84GV0I4AoKcDxeejojeK3WEFm9Cgb_cqWRmPB4Gl_qfBLLAJHqzGnWiMRHEMdhEP1JSFc_vUEptMHDtlvG4QjsS0Tq4jWP7cEtrcaRX24qs-ccdg7qyuTUljV3pEw_LQcx8ZW9-KkO2P0LP13NFXuLz_yp6sO2sNDA2n7RO32TBf8tophwqe_kjMco6MubHfByVp0elfwFY8hdNIMK2jnGwOgYAj6WDGa_LayamEKaBgBLqTdczZhcfS70Lvd3iaYnuyvtMNPhr6buE_R81HvbUr-Q-vKPUM48TxpNzX0aELYeh5w0lOkyl8VgaVM8QCo8VHO9qsy12dAU8NBtmBglo2L_thQv44g8HhXnlmC10X0etXSc8gh0zyvVUE33SngtTDqovaCI9-aCs-Q5I5tCpwVVdaNPFFV9iNYgSSbgPtYgBNAke_dLmNxLiASEE7tnFrJELYbcM1PAfyL2DZ7Ou2zCfn2UXPk7Cl9sxSfEaYL_q5ZINN6-x-s8YoyT1hjk5YbeH6KJIDRXIvcPXgwDqj2a_wh0enS)
+
+[How To Run Remote Jupyter Notebooks with SSH on Windows 10](https://www.pugetsystems.com/labs/hpc/How-To-Run-Remote-Jupyter-Notebooks-with-SSH-on-Windows-10-1477/)
 
 
