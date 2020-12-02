@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: 凡心所向，素履以往；生如逆旅，一苇以航。
+subtitle: There isn't time, so brief is life, for bickerings, apologies, heartburnings, callings to account. There is only time for loving, and but an instant, so to speak, for that. 
 ---
 
 My name is Alan Cheng. I have the following qualities:
