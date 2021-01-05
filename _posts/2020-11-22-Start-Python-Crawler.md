@@ -10,7 +10,7 @@ So let's Start it!
 
 ## Have a look, and just look
 
-One of my best friend told me that she need the sale data about Midea, Joyoung(...)'s air fryer and Dianbingdang. So I search them in [Taobao](https://www.taobao.com/) firstly. Look, some pictures are as follow:
+One of my friend told me that she need the sale data about Midea, Joyoung(...)'s air fryer and Dianbingdang. So I search them in [Taobao](https://www.taobao.com/) firstly. Look, some pictures are as follow:
 
 
 ![Midea](../images/taobao1.jpg)
