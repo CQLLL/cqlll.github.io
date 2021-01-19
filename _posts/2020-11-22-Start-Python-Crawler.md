@@ -14,8 +14,7 @@ One of my friend told me that she need the sale data about Midea, Joyoung(...)'s
 
 
 ![Midea](../images/taobao1.jpg)
-
-
+![Midea](../images/draw.drawio.svg)
 Then we can click the button of sales-dec and it may be helpful for selection.
 
 ![Midea](../images/taobao3.jpg)
