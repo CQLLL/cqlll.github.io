@@ -2,7 +2,7 @@
 layout: post
 title: LC1202
 ---
-## [交换字符串中的元素]](https://leetcode-cn.com/problems/smallest-string-with-swaps/)
+## [交换字符串中的元素](https://leetcode-cn.com/problems/smallest-string-with-swaps/)
 
 给你一个字符串 s，以及该字符串中的一些「索引对」数组 pairs，其中 pairs[i] = [a, b] 表示字符串中的两个索引（编号从 0 开始）。
 
