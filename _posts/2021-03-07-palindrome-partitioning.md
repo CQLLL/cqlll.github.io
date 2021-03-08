@@ -1,6 +1,6 @@
 ---
 layout: post
-title: lc131-palindrome-partitioning
+title: LC131-palindrome-partitioning
 ---
 
 
