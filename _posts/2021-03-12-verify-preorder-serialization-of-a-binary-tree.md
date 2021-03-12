@@ -50,7 +50,6 @@ title:  栈在二叉树前序遍历中的特殊应用
 ### 提交代码
 
 ```C++
-
 class Solution {
 public:
     bool isValidSerialization(string preorder) {
@@ -60,33 +59,34 @@ public:
         vector<string>::iterator it;
         int i = 0;
         while(i<n)
-        {
-            if(isdigit(preorder[i]))
-            {
-                digit+=preorder[i];
-                i++;
-                if(!isdigit(preorder[i])||i==n){
-                    s.push_back(digit);
-                    digit="";
-                }
-                continue;
+        {   
+            if(preorder[i]==','){
+                ++i;
             }
-            if(!isdigit(preorder[i])&&preorder[i]!=',')
+            else if(preorder[i]=='#')
             {
                 s.push_back("#");
-                i++;
+                ++i;
+            }
+            else
+            {
+                while(i<n&&preorder[i]!=',')
+                {
+                    digit+=preorder[i];
+                    ++i;
+                }
+                s.push_back(digit);
+                digit="";
             }
             while(s.size()>=3&&*(it=(s.end()-1))=="#"&&*(it-1)=="#"&&*(it-2)!="#")
             {
                 s.pop_back();s.pop_back();s.pop_back();
                 s.push_back("#");
             }
-            i++;
         }
         return s.size()==1 && s.back() == "#";
     }
 };
-
 class Solution{
 public:
     bool isValidSerialization(string pre){
