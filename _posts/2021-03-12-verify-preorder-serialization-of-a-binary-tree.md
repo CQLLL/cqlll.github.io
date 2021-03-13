@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  栈在二叉树前序遍历中的特殊应用
+title:  栈在二叉树前序遍历中的特殊应用(conda clean -i 是个神仙指令)
 ---
 
 ## [验证二叉树的前序序列化](https://leetcode-cn.com/problems/verify-preorder-serialization-of-a-binary-tree/)
