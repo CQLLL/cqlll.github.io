@@ -13,10 +13,6 @@ title:  链接地址法(gcc不包含iostream？)
 - bool contains(key) 返回哈希集合中是否存在这个值 key 。
 - void remove(key) 将给定值 key 从哈希集合中删除。如果哈希集合中没有这个值，什么也不做。
 
-
-
-
-
 ### 示例1：
 <pre>
 <strong>输入:</strong> ["MyHashSet", "add", "add", "contains", "contains", "add", "contains", "remove", "contains"]
@@ -41,7 +37,7 @@ myHashSet.contains(2); // 返回 False ，（已移除）
 
 ### 思路分析:
 
-- 根据算法导论散列表的链接法，hash函数对一个比较大的质数求取余数，然后通过链表查找来增减元素。
+- 根据算法导论散列表的链接法，hash函数对一个比较大的质数求取余数，然后通过链表查找来增减元素(直接开数组并不可取)。
 
 ### 提交代码
 
