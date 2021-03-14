@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  链接地址法(gcc不包含iostream？)
+title:  链接地址法(直接用pair就完事了)
 ---
 
 ## [设计哈希映射](https://leetcode-cn.com/problems/design-hashmap/)
