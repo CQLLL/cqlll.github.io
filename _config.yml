@@ -18,7 +18,7 @@ navbar-links:
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Author's home: "https://leetcode-cn.com/u/zi-guang-u/"
 
 # --- Logo --- #
 
@@ -39,10 +39,10 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
+  email: "alanalacheng@gmail.com"
   facebook: deanattali
-  github: daattali
-  twitter: daattali
+  github: CQLLL
+  # twitter: daattali
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
@@ -193,6 +193,11 @@ paginate: 5
 
 kramdown:
   input: GFM
+
+
+
+collections:
+  - staff_members
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
