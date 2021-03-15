@@ -1,51 +1,27 @@
 ---
-layout: compress
-# Default layout
+layout: base
 ---
 
-<!DOCTYPE html>
+<div class="intro-header"></div>
 
-{% capture prefer_mode %}
-  {% if site.theme_mode %}
-    mode="{{ site.theme_mode }}"
+<div role="main" class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
+  {% if page.before-content %}
+    <div class="before-content">
+      {% for file in page.before-content %}
+        {% include {{ file }} %}
+      {% endfor %}
+    </div>
   {% endif %}
-{% endcapture %}
 
-<html lang="{{ site.lang | default: "en-US" }}" {{ prefer_mode }}>
+  {{ content }}
 
-  {% include head.html %}
+  {% if page.after-content %}
+    <div class="after-content">
+      {% for file in page.after-content %}
+        {% include {{ file }} %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
 
-  <body data-spy="scroll" data-target="#toc">
 
-    {% include sidebar.html %}
-
-    {% include topbar.html %}
-
-    <div id="main-wrapper">
-      <div id="main">
-
-        {% include refactor-content.html content=content %}
-
-        {% include footer.html %}
-
-      </div>
-
-      {% include search-results.html %}
-
-    </div> <!-- #main-wrapper -->
-
-    {% if page.mermaid %}
-      {% include mermaid.html %}
-    {% endif %}
-
-    <div id="mask"></div>
-
-    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
-      <i class="fas fa-angle-up"></i>
-    </a>
-
-    {% include search-loader.html %}
-
-  </body>
-
-</html>

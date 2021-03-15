@@ -1,175 +1,238 @@
-# The Site Configuration
+# Welcome to Beautiful Jekyll!
+# This config file is meant for settings that affect your entire website. When you first
+# set up your website you should go through all these settings and edit them, but after
+# the initial set up you won't need to come back to this file often.
 
-# Import the theme
-theme: jekyll-theme-chirpy
+# --- Required options --- #
 
-# Only if your site type is GitHub Project sites and doesn't have a custom domain,
-# change below value to '/projectname'.
-baseurl: ''
+# Name of website
+title: 宇智波子光
 
-# the HTML language tag › https://www.w3.org/International/questions/qa-choosing-language-tags
-lang: en-US
+# Your name to show in the footer
+author: Alan Cheng
 
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+# --- List of links in the navigation bar --- #
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-# --------------------------
-title: Chirpy                          # the main title
+navbar-links:
+  About Me: "aboutme"
+  Resources:
+    - Beautiful Jekyll: "https://beautifuljekyll.com"
+    - Learn markdown: "https://www.markdowntutorial.com/"
+  Author's home: "https://leetcode-cn.com/u/zi-guang-u/"
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+# --- Logo --- #
 
-description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+# Image to show in the navigation bar - works best with a square image
+# Remove this parameter if you don't want an image in the navbar
+avatar: "/assets/img/Ulchiha.png"
 
-# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+# By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
+round-avatar: true
 
-author: your_full_name                  # change to your full name
+# If you want to have an image logo in the top-left corner instead of having the title of the website,
+# then specify the following parameter
+#title-img: /path/to/image
 
-github:
-  username: github_username             # change to your github username
 
-twitter:
-  username: twitter_username            # change to your twitter username
+# --- Footer social media links --- #
 
-social:
-  name: your_full_name                  # it will shows as the copyright owner in Footer
-  email: example@doamin.com             # change to your email address
-  links:
-    # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+# Select the social network links that you want to show in the footer.
+# Uncomment the links you want to show and add your information to each one.
+social-network-links:
+  email: "alanalacheng@gmail.com"
+  facebook: deanattali
+  github: CQLLL
+  # twitter: daattali
+#  reddit: yourname
+#  linkedin: daattali
+#  xing: yourname
+#  stackoverflow: "3943160/daattali"
+#  snapchat: deanat78
+#  instagram: deanat78
+#  youtube: user/deanat78
+#  spotify: yourname
+#  telephone: +14159998888
+#  steam: deanat78
+#  twitch: yourname
+#  yelp: yourname
+#  telegram: yourname
+#  calendly: yourname
+#  mastodon: instance.url/@username
+#  ORCID: your ORCID ID
+#  google-scholar: your google scholar
 
-google_site_verification: google_meta_tag_verification # change to your verification string
-# --------------------------
+# If you want to show a link to an RSS in the footer, add the site description here.
+# If you don't want to show an RSS link, remove the following line.
+rss-description: This website is a virtual proof that I'm awesome
 
-google_analytics:
-  id: ''          # Fill with your Google Analytics ID
-  pv:
-    # The Google Analytics pageviews switch.
-    # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
-    enabled: false
-    # the next options only valid when `google_analytics.pv` is enabled.
-    proxy_url: ''
-    proxy_endpoint: ''
-    cache: false  # pv data local cache, good for the users from GFW area.
+# --- General options --- #
 
-# Prefer color scheme setting.
-#
-# Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
-# on the bottom left of the sidebar.
-#
-# Available options:
-#
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
-#
-theme_mode:   # [light|dark]
+# Select which social network share links to show in posts
+share-links-active:
+  twitter: true
+  facebook: true
+  linkedin: true
+  vk: false
 
-# The CDN endpoint for images.
-# Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
-#
-# e.g. 'https://cdn.com'
-img_cdn: ''
+# How to display the link to your website in the footer
+# Remove this if you don't want a link in the footer
+url-pretty: "MyWebsite.com"
 
-# the avatar on sidebar, support local or CORS resources
-avatar: https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/commons/avatar.jpg
+# Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
+excerpt_length: 50
 
-# boolean type, the global switch for ToC in posts.
-toc: true
+# Whether or not to show an excerpt for every blog post in the feed page
+feed_show_excerpt: true
 
-disqus:
-  comments: false  # boolean type, the global switch for posts comments.
-  shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+# Whether or not to show a list of tags below each post preview in the feed page
+feed_show_tags: true
 
-paginate: 10
+# The keywords to associate with your website, for SEO purposes
+#keywords: "my,list,of,keywords"
 
-# ------------ The following options are not recommended to be modified ------------------
+# --- Colours / background image --- #
+
+# Personalize the colours in your website. Colour values can be any valid CSS colour
+
+navbar-col: "#EAEAEA"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
+page-col: "#FFFFFF"
+text-col: "#404040"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+footer-col: "#EAEAEA"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+
+# Alternatively, the navbar, footer, and page background can be set to an image
+# instead of colour
+
+#navbar-img: "/assets/img/bgimage.png"
+#footer-img: "/assets/img/bgimage.png"
+#page-img: "/assets/img/bgimage.png"
+
+# Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
+#mobile-theme-col: "#0085A1"
+
+# For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
+#site-css:
+#  - "/assets/css/custom-styles.css"
+
+# If you have common JavaScript files that should be included in every page, list them here
+#site-js:
+#  - "/assets/js/custom-script.js"
+
+# --- Web Analytics Section --- #
+
+# Fill in your Google Analytics gtag.js ID to track your website using gtag
+#gtag: ""
+
+# Fill in your Google Analytics ID to track your website using Google Analytics
+#google_analytics: ""
+
+# Google Tag Manager ID
+#gtm: ""
+
+# Matomo (aka Piwik) Web statistics
+# Uncomment the following section to enable Matomo. The opt-out parameter controls
+# whether or not you want to allow users to opt out of tracking.
+#matomo:
+#  site_id: "9"
+#  uri: "demo.wiki.pro"
+#  opt-out: true
+
+# --- Comments --- #
+
+# To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
+#disqus: ""
+
+# To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
+#fb_comment_id: ""
+
+# To use Utterances comments: (0) uncomment the following section, (1) fill in
+# "repository" (make sure the repository is public), (2) Enable Issues in your repository,
+# (3) Install the Utterances app in your repository https://github.com/apps/utterances
+# See more details about the parameters below at https://utteranc.es/
+#utterances:
+#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  issue-term: title   # Mapping between blog posts and GitHub issues
+#  theme: github-light # Utterances theme
+#  label: blog-comments # Label that will be assigned to GitHub Issues created by Utterances
+
+# To use Staticman comments, first invite `staticmanlab` as a collaborator to your repository and
+# accept the invitation by going to `https://staticman3.herokuapp.com/v3/connect/github/<username>/<repo-name>`.
+# Then uncomment the following section and fill in "repository" and "branch".
+# If you want to use reCaptcha for staticman (optional for spam protection), then fill
+# in the "siteKey" and "secret" parameters below and also in `staticman.yml`.
+# See more details at https://staticman.net/
+#staticman:
+#  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  branch     : master # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
+#  endpoint   : # (optional) URL of your own deployment, with a trailing slash eg. https://<your-api>/v3/entry/github/ (will fallback to a public GitLab instance)
+#  reCaptcha:
+#    siteKey  : # Use your own site key, you need to apply for one on Google
+#    secret   : # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
+
+# --- Misc --- #
+
+# Ruby Date Format to show dates of posts
+date_format: "%B %-d, %Y"
+
+# Facebook App ID
+#fb_app_id: ""
+
+# --- You don't need to touch anything below here (but you can if you want) --- #
+
+# Output options (more information on Jekyll's site)
+timezone: "America/Toronto"
+markdown: kramdown
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
+paginate: 5
 
 kramdown:
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: highlight
-    # default_lang: console
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
+  input: GFM
 
-# DO NOT change this unless you're a Pro user on Jekyll and Web development,
-# Or you think you're smart enough to change other relevant URLs within this template.
-permalink: /posts/:title/
 
 collections:
-  tabs:
+  animals:
     output: true
-    sort_by: order
+    permalink: /my-animal/:name
 
 
+# defaults:
+# Default YAML values (more information on Jekyll's site)
 defaults:
   -
     scope:
-      path: ''          # An empty string here means all files in the project
-      type: posts
+      path: ""
+      type: "posts"
     values:
-      layout: post
-      comments: true    # Enable comments in posts.
-      toc: true         # Display TOC column in posts.
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
   -
     scope:
-      path: _drafts
+      path: "" # any file that's not a post will be a "page" layout by default
     values:
-      comments: false
-  -
-    scope:
-      path: ''
-      type: tabs             # see `site.collections`
-    values:
-      layout: page
-      permalink: /:title/
-      dynamic_title: true    # Hide title in mobile screens.
+      layout: "page"
 
-sass:
-  style: compressed
-
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
-  blanklines: false
-  ignore:
-    envs: [development]
-
+# Exclude these files from production site
 exclude:
-  - vendor
+  - CHANGELOG.md
+  - CNAME
   - Gemfile
   - Gemfile.lock
-  - '*.gem'
-  - '*.gemspec'
-  - tools
-  - docs
-  - README.md
   - LICENSE
-  - gulpfile.js
-  - node_modules
-  - package.json
-  - package-lock.json
+  - README.md
+  - screenshot.png
+  - docs/
 
-jekyll-archives:
-  enabled: [categories, tags]
-  layouts:
-    category: category
-    tag: tag
-  permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# Beautiful Jekyll / Dean Attali
+# 2fc73a3a967e97599c9763d05e564189
+

@@ -1,80 +1,149 @@
-<!--
-  The Head
--->
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  {% if page.layout == 'home' or page.layout == 'post' %}
-    <meta name="pv-cache-enabled" content="{{ site.google_analytics.pv.enabled }}">
+  {% capture title %}
+    {%- if page.share-title -%}
+      {{ page.share-title }}
+    {%- elsif page.title -%}
+      {{ page.title }}
+    {%- else -%}
+      {{ site.title }}
+    {%- endif -%}
+  {% endcapture %}
 
-    {% if site.google_analytics.pv.enabled %}
-      {% if site.google_analytics.pv.proxy_endpoint != ''
-        and site.google_analytics.pv.proxy_endpoint %}
-        <meta name="pv-proxy-endpoint" content="{{ site.google_analytics.pv.proxy_endpoint }}">
-      {% endif %}
+  {% capture description %}
+    {%- if page.share-description -%}
+      {{ page.share-description }}
+    {%- elsif page.subtitle -%}
+      {{ page.subtitle }}
+    {%- else -%}
+      {%- assign excerpt_length = site.excerpt_length | default: 50 -%}
+      {{ page.content | strip_html | xml_escape | truncatewords: excerpt_length | strip }}
+    {%- endif -%}
+  {% endcapture %}
 
-      {% if site.google_analytics.pv.cache %}
-        <meta name="pv-cache-data" content="{{ '/assets/js/data/pageviews.json' | relative_url }}">
-      {% endif %}
+  <title>{{ title }}</title>
 
-    {% endif %}
+  {% if site.author %}
+  <meta name="author" content="{{ site.author }}">
   {% endif %}
 
-  {% seo title=false %}
+  <meta name="description" content="{{ description }}">
 
-  <title>
-  {%- unless page.layout == "home" -%}
-    {{ page.title | append: " | "}}
-  {%- endunless -%}
-    {{ site.title }}
-  </title>
-
-  {% include favicons.html %}
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-
-  <!-- GA -->
-  {% if jekyll.environment == 'production' %}
-    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials">
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
-
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-    {% if site.google_analytics.pv.proxy_url and site.google_analytics.pv.enabled %}
-      <link rel="preconnect" href="{{ site.google_analytics.pv.proxy_url }}" crossorigin="use-credentials">
-      <link rel="dns-prefetch" href="{{ site.google_analytics.pv.proxy_url }}">
-    {% endif %}
+  {% if site.mobile-theme-col %}
+  <meta name="theme-color" content="{{ site.mobile-theme-col }}">
   {% endif %}
 
-  <!-- jsDelivr CDN -->
-  <link rel="preconnect" href="cdn.jsdelivr.net">
-  <link rel="dns-prefetch" href="cdn.jsdelivr.net">
+  {% if site.keywords %}
+  <meta name="keywords" content="{{ site.keywords }}">
+  {% endif %}
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"
-    integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
-    crossorigin="anonymous">
+  {% include gtag.html %}
+  {% include gtm_head.html %}
+  {% include google_analytics.html %}
 
-  {% include css-selector.html %}
+  {% if layout.common-ext-css %}
+    {% for css in layout.common-ext-css %}
+      {% include ext-css.html css=css %}
+    {% endfor %}
+  {% endif %}
 
-  <!-- JavaScripts -->
+  {% if layout.common-css %}
+    {% for css in layout.common-css %}
+      <link rel="stylesheet" href="{{ css | relative_url }}">
+    {% endfor %}
+  {% endif %}
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  {% if site.site-css %}
+    {% for css in site.site-css %}
+      <link rel="stylesheet" href="{{ css | relative_url }}">
+    {% endfor %}
+  {% endif %}
 
-  <script defer
-    src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4/dist/js/bootstrap.min.js"></script>
+  {% if page.ext-css %}
+    {% for css in page.ext-css %}
+      {% include ext-css.html css=css %}
+    {% endfor %}
+  {% endif %}
+  
+  {% if page.css %}
+    {% for css in page.css %}
+      <link rel="stylesheet" href="{{ css | relative_url }}">
+    {% endfor %}
+  {% endif %}
 
-  {% include js-selector.html %}
+  {% if site.fb_app_id %}
+  <meta property="fb:app_id" content="{{ site.fb_app_id }}">
+  {% endif %}
+
+  {% if site.title %}
+  <meta property="og:site_name" content="{{ site.title }}">
+  {% endif %}
+
+  {%- capture img -%}
+    {%- if page.share-img -%}
+      {{ page.share-img }}
+    {%- elsif page.cover-img -%}
+      {%- if page.cover-img.first -%}
+        {{ page.cover-img[0].first.first }}
+      {%- else -%}
+        {{ page.cover-img }}
+      {%- endif -%}
+    {%- elsif page.thumbnail-img -%}
+      {{ page.thumbnail-img }}
+    {%- elsif site.avatar -%}
+      {{ site.avatar }}
+    {% endif %}
+  {%- endcapture -%}
+  {%- assign img=img | strip -%}
+
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+
+  {% if img != "" %}
+  <meta property="og:image" content="{{ img | absolute_url }}">
+  {% endif %}
+
+  {% if page.id %}
+  <meta property="og:type" content="article">
+  <meta property="og:article:author" content="{{ site.author }}">
+  <meta property="og:article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {% else %}
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url | strip_index }}">
+  <link rel="canonical" href="{{ page.url | absolute_url | strip_index }}">
+  {% endif %}
+
+  {% if img != "" and img != site.avatar %}
+  <meta name="twitter:card" content="summary_large_image">
+  {% else %}
+  <meta name="twitter:card" content="summary">
+  {% endif %}
+  <meta name="twitter:site" content="@{{ site.social-network-links.twitter }}">
+  <meta name="twitter:creator" content="@{{ site.social-network-links.twitter }}">
+
+  <meta property="twitter:title" content="{{ title }}">
+  <meta property="twitter:description" content="{{ description }}">
+
+  {% if img != "" %}
+  <meta name="twitter:image" content="{{ img | absolute_url }}">
+  {% endif %}
+
+  {% include matomo.html %}
+
+  {% if page.comments and site.staticman.repository and site.staticman.branch %}
+  <link rel="stylesheet" href="{{ "/assets/css/staticman.css" | relative_url }}">
+  {% endif %}
+
+  {% if page.head-extra %}
+    {% for file in page.head-extra %}
+      {% include {{ file }} %}
+    {% endfor %}
+  {% endif %}
 
 </head>
