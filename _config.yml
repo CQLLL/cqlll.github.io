@@ -198,7 +198,10 @@ kramdown:
 collections:
   animals:
     output: true
+    permalink: /my-animal/:name
 
+
+    
 # Default YAML values (more information on Jekyll's site)
 defaults:
   -
