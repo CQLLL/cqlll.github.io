@@ -1,13 +1,16 @@
-# project
+# hidden files
+.*
+!.github
+
+# jekyll cache
 _site
-.sass-cache
-.vagrant
+vendor
 
-# general
-.DS_Store
-Thumbs.db
-ehthumbs.db
+# rubygem
+*.gem
+# yard docs
+doc
 
-Gemfile.lock
-
-beautiful-jekyll-theme-*.gem
+# npm dependencies
+node_modules
+package-lock.json

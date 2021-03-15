@@ -1,31 +1,34 @@
 ---
-layout: base
+layout: default
+# The page layout
 ---
 
-{% include header.html type="page" %}
-
-<div class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}" role="main">
-  <div class="row">
-    <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
-      {% if page.before-content %}
-        <div class="before-content">
-          {% for file in page.before-content %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
-      {% endif %}
-
+<div class="row">
+  <div class="col-12 col-lg-11 col-xl-8">
+    <div id="page" class="post pb-5 pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4 mb-md-4">
+    {% if page.dynamic_title %}
+      <h1 class="dynamic-title">{{ page.title }}</h1>
+      <div class="post-content">
+        {{ content }}
+      </div>
+    {% else %}
       {{ content }}
+    {% endif %}
+    </div> <!-- #page -->
+  </div><!-- .col-12 -->
 
-      {% if page.after-content %}
-        <div class="after-content">
-          {% for file in page.after-content %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
-      {% endif %}
+  {% include panel.html %}
 
-      {% include comments.html %}
-    </div>
-  </div>
 </div>
+
+{% if site.disqus.comments and page.comments %}
+<div class="row">
+  <div class="col-12 col-lg-11 col-xl-8">
+    <div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+
+    {% include disqus.html %}
+
+    </div> <!-- .pl-1 pr-1 -->
+  </div> <!-- .col-12 -->
+</div> <!-- .row -->
+{% endif %}
