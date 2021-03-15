@@ -1,9 +1,8 @@
 ---
-layout: page
-title: zebra - Page not found
-permalink: /404.html
+layout: animal # You can ommit this if you've set it as a default
+title: Zebra
+class:     Mammalia
+family: Equidae
+headline: Zebras are the best!
+
 ---
-
-Sorry, we can't find that page that you're looking for. You can try again by going [back to the homepage]({{ site.baseurl }}/).
-
-[<img src="{{ site.baseurl }}/images/404.jpg" alt="Constructocat by https://github.com/jasoncostello" style="width: 400px;"/>]({{ site.baseurl }}/)

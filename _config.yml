@@ -195,11 +195,9 @@ kramdown:
   input: GFM
 
 
-collections_dir: my_collections
-
 collections:
-  posts:
-  output: true
+  animals:
+    output: true
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
