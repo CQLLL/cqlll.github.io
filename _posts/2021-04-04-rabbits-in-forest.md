@@ -3,7 +3,7 @@ layout: post
 title:  森林中的兔子（贪心算法）
 ---
 
-## [森林中的兔子](https://leetcode-cn.com/problems/trapping-rain-water-ii/)
+## [森林中的兔子](https://leetcode-cn.com/problems/rabbits-in-forest/)
 
 
 森林中，每个兔子都有颜色。其中一些兔子（可能是全部）告诉你还有多少其他的兔子和自己有相同的颜色。我们将这些回答放在 answers 数组里。
